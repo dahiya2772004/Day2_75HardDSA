@@ -1,0 +1,9 @@
+class Solution:
+    def removeConsecutiveCharacter(self, s):
+        result = [s[0]]  # Start with the first character in the list
+        for char in s[1:]:  # Loop through the rest of the string
+            if char != result[-1]:  # Add only if different from the last character
+                result.append(char)
+        return ''.join(result)  # Convert the list back to a string
+
+
